@@ -1,0 +1,120 @@
+/* Page background */
+.add-product-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top left, #8b5cf6, transparent 40%),
+    radial-gradient(circle at bottom right, #22d3ee, transparent 40%),
+    linear-gradient(135deg, #0f172a, #020617);
+  padding: 24px;
+}
+
+/* Glass card */
+.add-product-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  color: #f8fafc;
+  animation: floatIn 0.6s ease;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 26px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #e5e7eb;
+  opacity: 0.85;
+}
+
+/* Inputs */
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.25s ease;
+}
+
+.form-group input:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.25);
+}
+
+/* File input */
+.form-group input[type="file"] {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Image preview */
+.image-preview {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0;
+}
+
+.image-preview img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #22d3ee, #8b5cf6);
+  color: #020617;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(139, 92, 246, 0.45);
+}
+
+/* Entry animation */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
